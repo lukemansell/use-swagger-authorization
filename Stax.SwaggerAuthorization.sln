@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stax.UseSwaggerAuthorization", "Stax.UseSwaggerAuthorization\Stax.UseSwaggerAuthorization.csproj", "{A4287977-D0FD-4A90-B500-1D6CE3BE1D7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stax.SwaggerAuthorization", "Stax.SwaggerAuthorization\Stax.SwaggerAuthorization.csproj", "{A4287977-D0FD-4A90-B500-1D6CE3BE1D7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

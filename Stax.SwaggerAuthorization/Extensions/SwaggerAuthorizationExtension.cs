@@ -1,10 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Options;
-using UseSwaggerAuthorization.Middleware;
-using UseSwaggerAuthorization.Models;
+using SwaggerAuthorization.Middleware;
 
-namespace UseSwaggerAuthorization.Extensions;
+namespace SwaggerAuthorization.Extensions;
 
 public static class SwaggerAuthorizationExtension
 {
@@ -16,9 +14,9 @@ public static class SwaggerAuthorizationExtension
     /// you want to use to protect the swagger endpoint.</param>
     /// <returns></returns>
     public static IApplicationBuilder UseSwaggerBasicAuthorization
-        (this IApplicationBuilder applicationBuilder, SwaggerBasicAuthorizationOptions authorizationOptions)
+        (this IApplicationBuilder applicationBuilder)
     {
-        return applicationBuilder.UseMiddleware<SwaggerMiddleware>(Options.Create(authorizationOptions));
+        return applicationBuilder.UseMiddleware<SwaggerAuthorizationMiddleware>();
     }
 
     private static IApplicationBuilder UseSwaggerIAPAuthorization
