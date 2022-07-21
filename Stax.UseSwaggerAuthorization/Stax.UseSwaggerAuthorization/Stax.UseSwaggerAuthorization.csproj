@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+        <Title>Swagger Authorization</Title>
+        <Authors>Luke Mansell</Authors>
+        <Description>Adds basic authorization to swagger endpoints with a login screen. Future updates will offer more options such as IAP.</Description>
+        <Copyright>Luke Mansell</Copyright>
+        <PackageProjectUrl>https://github.com/lukemansell/use-swagger-authorization</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/lukemansell/use-swagger-authorization</RepositoryUrl>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageVersion>0.1.0</PackageVersion>
+        <PackageReleaseNotes>https://github.com/lukemansell/use-swagger-authorization/blob/main/CHANGELOG.md</PackageReleaseNotes>
+        <PackageTags>swagger;authorization;authentication;security;login;</PackageTags>
+        <PackageId>Stax.UseSwaggerAuthorization</PackageId>
+        <RootNamespace>UseSwaggerAuthorization</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    </ItemGroup>
+
+</Project>
