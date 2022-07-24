@@ -20,6 +20,17 @@ Step 1: Add something like this to your appsettings.json, or setup environment v
 }
 ```
 
+You can also disable having this login screen occur by adding: "Disabled: true" - which can be useful if you want to add this to your `appsettings.Development.json file for example`. Eg:
+
+#### appsettings.Development.json:
+```json
+"SwaggerAuthorization": {
+    "Username": "uid",
+    "Password": "pwd",
+    "Disabled": true
+}
+```
+
 #### Program.cs/startup
 
 On default projects, your `app.UseSwagger();` is in a `if (env.IsDevelopment())` statement. You can move this out of this if statement.
