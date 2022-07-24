@@ -13,7 +13,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryType>GitHub</RepositoryType>
-        <PackageVersion>0.1.0-alpha</PackageVersion>
+        <PackageVersion>0.2.0-alpha</PackageVersion>
         <PackageReleaseNotes>https://github.com/lukemansell/use-swagger-authorization/blob/main/CHANGELOG.MD</PackageReleaseNotes>
         <PackageTags>swagger;authorization;authentication;security;login;</PackageTags>
         <PackageId>Stax.SwaggerAuthorization</PackageId>

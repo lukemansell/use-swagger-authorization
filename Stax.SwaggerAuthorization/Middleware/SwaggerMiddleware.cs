@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using SwaggerAuthorization.Constants;
 
 namespace SwaggerAuthorization.Middleware;
 
@@ -21,7 +22,8 @@ public class SwaggerAuthorizationMiddleware
 
     public async Task InvokeAsync(HttpContext httpContext)
     {
-        if (httpContext.Request.Path.StartsWithSegments("/swagger"))
+        if (!_configuration.GetValue<bool>(ConfigurationConstants.SwaggerAuthorizationDisable) 
+            && httpContext.Request.Path.StartsWithSegments("/swagger"))
         {
             var request = httpContext.Request;
             var authorization = request.Headers["Authorization"].ToString();
@@ -34,7 +36,8 @@ public class SwaggerAuthorizationMiddleware
                 var username = credentials[0];
                 var password = credentials[1];
                 
-                if (username.Equals(_configuration.GetValue<string>("SwaggerAuthorization:Username")) && password.Equals(_configuration.GetValue<string>("SwaggerAuthorization:Password"))) {
+                if (username.Equals(_configuration.GetValue<string>(ConfigurationConstants.SwaggerAuthorizationUsername)) 
+                    && password.Equals(_configuration.GetValue<string>(ConfigurationConstants.SwaggerAuthorizationPassword))) {
                     await _requestDelegate.Invoke(httpContext).ConfigureAwait(false);
                     return;
                 }
